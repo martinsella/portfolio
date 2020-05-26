@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Act5</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body background="../images/background.jpg">
+
+<canvas style="background-color: white; float: left; border: 1px solid black;" id="pantalla" width="1000"; height="600"></canvas>
+
+<br><br><br><button id="boton3" class="boton3">Borrar</button><br><br><br><br><button id="boton4" class="boton3">Lapiz 15px</button><br><br><br><br><button id="boton5" class="boton3">Lapiz 25px</button><br><br><br><br><button id="boton6" class="boton3">Lapiz default</button>
+
+    <script>
+
+        alert("He desarrollado un Paint minimalista, ¡espero que lo disfrutes!");
+
+        var canvas = document.getElementById("pantalla");
+        var ctx = canvas.getContext('2d');
+        var sizex = 5;
+        var sizey = 5;
+        var clean = document.getElementById("boton3");
+        var set15 = document.getElementById("boton4");
+        var set25 = document.getElementById("boton5");
+        var setdef = document.getElementById("boton6");
+
+        window.onmousemove = function dibujar(){
+            var x = window.event.clientX;
+            var y = window.event.clientY;
+            ctx.fillRect (x, y, sizex, sizey);
+        };
+
+        function dibujar15(){
+            sizex = 15;
+            sizey = 15;
+            dibujar();
+        }
+
+        function dibujar25(){
+            sizex = 25;
+            sizey = 25;
+            dibujar();
+        }
+
+        function set5() {
+            sizex = 5;
+            sizey = 5;
+            dibujar();
+        }
+
+        function borrar() {
+            canvas.width=canvas.width;
+        }
+
+        clean.onclick = borrar;
+        set15.onclick = dibujar15;
+        set25.onclick = dibujar25;
+        setdef.onclick = set5;
+            
+        
+
+    </script>
+
+</body>
+</html>

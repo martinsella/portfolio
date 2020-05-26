@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Act1</title>
+
+</head>
+<body>
+
+    <div class="parrafo">
+
+        <div id="correctas"></div>
+
+    </div>
+
+    <script>
+       
+        alert("Procederás a jugar a este trivia. ¡Deberás escribir la letra correspondiente a la respuesta que creas correcta!")
+        alert("Encontrarás un total de 5 preguntas, cada una de ellas te concederá 2 puntos. ¡Suerte!")
+
+        var respuesta = "a";
+        var pregunta = prompt("¿Cómo se llama la empresa que desarrolla/desarrolló Counter strike? Respuestas posibles: (a)Valve, (b)Electronic Arts, (c)Activision, (d)Epic Games");
+        var correctas = 0;
+        if(pregunta == respuesta) {
+            alert("¡La respuesta es correcta!")
+            var correctas = correctas + 2;            
+            }
+            else{
+                alert("¡La respuesta es incorrecta!")
+            }
+            console.log(correctas)
+        
+        var respuesta = "b";
+        var pregunta = prompt("¿En que año fue lanzado? Respuestas posibles: (a)2011, (b)2012, (c)2013, (d)2014");
+        if(pregunta == respuesta) {
+            alert("¡La respuesta es correcta!")
+            var correctas = correctas + 2;            
+            }
+            else{
+                alert("¡La respuesta es incorrecta!")
+            }
+            console.log(correctas)
+
+        var respuesta = "c";
+        var pregunta = prompt("¿En que consola se podía jugarlo anteriormente, antes de ser descontinuado? Respuestas posibles: (a)Xbox 360, (b)Xbox One, (c)Play Station 3, (d)Play Station 4");
+        if(pregunta == respuesta) {
+            alert("¡La respuesta es correcta!")
+            var correctas = correctas + 2;            
+            }
+            else{
+                alert("¡La respuesta es incorrecta!")
+            }
+            console.log(correctas)
+
+        var respuesta = "a";
+        var pregunta = prompt("Si se desea descargar, ¿a que tienda digital debe accederse? Respuestas posibles: (a)Steam, (b)Epic Store, (c)Origin, (d)Battle.net");
+        if(pregunta == respuesta) {
+            alert("¡La respuesta es correcta!")
+            var correctas = correctas + 2;            
+            }
+            else{
+                alert("¡La respuesta es incorrecta!")
+            }
+            console.log(correctas)
+
+        var respuesta = "d";
+        var pregunta = prompt("¿Que significa VAC? Respuestas posibles: (a)Valve Anti Competitive, (b)Valve Anti Close, (c)Valve anti Chets, (d)Valve Anti Cheat");
+        if(pregunta == respuesta) {
+            alert("¡La respuesta es correcta!")
+            var correctas = correctas + 2;            
+            }
+            else{
+                alert("¡La respuesta es incorrecta!")
+            }
+            console.log(correctas)
+ 
+
+            var correctas = document.documentElement.innerHTML = "Tu puntuacion es de " + correctas;
+        
+        
+    </script>
+</body>
+</html>

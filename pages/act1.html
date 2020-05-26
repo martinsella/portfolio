@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Act1</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body background="../images/background.jpg">
+
+<form id="trivia" name="trivia">
+
+    <p class="titulo4">¿Cómo se llama la empresa que desarrolla/desarrolló Counter strike? (suma 2 puntos)</p>
+    <input type="radio" id="respuesta1" name="respuesta1" value="no"><label<p class="respuestas">Electronic Arts</p></label>
+    <input type="radio" id="respuesta1" name="respuesta1" value="valve"><label<p class="respuestas">Valve Corporation</p></label>
+    <input type="radio" id="respuesta1" name="respuesta1" value="no"><label<p class="respuestas">Epic Games</p></label>
+    <input type="radio" id="respuesta1" name="respuesta1" value="no"><label<p class="respuestas">Activision</p></label>
+    <br><br>
+
+    <p class="titulo4">¿Cuándo fue lanzado? (suma 2 puntos)</p>
+    <input type="radio" id="respuesta2" name="respuesta2" value="fecha"><label<p class="respuestas">21/08/2012</p></label>
+    <input type="radio" id="respuesta2" name="respuesta2" value="no"><label<p class="respuestas">15/11/2012</p></label>
+    <input type="radio" id="respuesta2" name="respuesta2" value="no"><label<p class="respuestas">10/03/2013</p></label>
+    <input type="radio" id="respuesta2" name="respuesta2" value="no"><label<p class="respuestas">07/10/2013</p></label>
+    <br><br>
+
+    <p class="titulo4">En un principio, CSGO podía ser jugado en una consola. ¿En cual? (suma 2 puntos)</p>
+    <input type="radio" id="respuesta3" name="respuesta3" value="no"><label<p class="respuestas">Xbox One</p></label>
+    <input type="radio" id="respuesta3" name="respuesta3" name="respuesta3" value="no"><label<p class="respuestas">Xbox 360</p></label>
+    <input type="radio" id="respuesta3" name="respuesta3" value="ps3"><label<p class="respuestas">Play Station 3</p></label>
+    <input type="radio" id="respuesta3" name="respuesta3" value="no"><label<p class="respuestas">Play Station 4</p></label>
+    <br><br>
+
+    <p class="titulo4">Si se desea jugar a este videojuego, ¿por donde debe obtenerse? (suma 2 puntos)</p>
+    <input type="radio" id="respuesta4" name="respuesta4" value="no"><label<p class="respuestas">Epic Store</p></label>
+    <input type="radio" id="respuesta4" name="respuesta4" value="no"><label<p class="respuestas">Origin</p></label>
+    <input type="radio" id="respuesta4" name="respuesta4" value="no"><label<p class="respuestas">Battle.net</p></label>
+    <input type="radio" id="respuesta4" name="respuesta4" value="steam"><label<p class="respuestas">Steam</p></label>
+    <br><br>
+
+    <p class="titulo4">¿Qué significan las siglas "V.A.C"? (suma 2 puntos)</p>
+    <input type="radio" id="respuesta5" name="respuesta5" value="no"><label<p class="respuestas">Valve Anti-Competitive</p></label>
+    <input type="radio" id="respuesta5" name="respuesta5" value="no"><label<p class="respuestas">Valve Anti-Cheats</p></label>
+    <input type="radio" id="respuesta5" name="respuesta5" value="vac"><label<p class="respuestas">Valve Anti-Cheat</p></label>
+    <input type="radio" id="respuesta5" name="respuesta5" value="no"><label<p class="respuestas">Valve Account Configuration</p></label>
+    <br><br>
+
+    <button id="boton2">Finalizar Trivia</button>
+    <br><br>
+
+</form>
+
+    <script>
+
+        alert("Procederás a jugar a este trivia. ¡Selecciona la respuesta que creas correcta a cada pregunta!");
+        alert("Encontrarás un total de 5 preguntas, cada una de ellas te concederá 2 puntos. ¡Suerte!");
+
+        function trivia() {
+            var r1 = document.trivia.respuesta1.value;
+            var r2 = document.trivia.respuesta2.value;
+            var r3 = document.trivia.respuesta3.value;
+            var r4 = document.trivia.respuesta4.value;
+            var r5 = document.trivia.respuesta5.value;
+            var correctas = 0 //contador
+
+            if (r1 == "valve") {
+                correctas = correctas + 2;
+            }
+            if (r2 == "fecha") {
+                correctas = correctas + 2;
+            }
+            if (r3 == "ps3") {
+                correctas = correctas + 2;
+            }
+            if (r4 == "steam") {
+                correctas = correctas + 2;
+            }
+            if (r5 == "vac") {
+                correctas = correctas + 2;
+            };
+            
+            alert("Tu puntuación es :  " + correctas);
+        };
+        
+        var boton = document.getElementById("boton2");
+
+        boton.onclick = trivia;
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>act2</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body background="../images/background.jpg">
+  
+    <script>
+
+    alert("¿Eres de argentina? Si es así, ¡disfruta de este reloj!")
+
+    function reloj() {
+
+        var hoy=new Date(); var h=hoy.getHours(); var m=hoy.getMinutes(); var s=hoy.getSeconds();
+    
+        m = actualizarHora(m);    s = actualizarHora(s);
+    
+        document.getElementById('Reloj').innerHTML = h+":"+m+":"+s;
+    
+        var t = setTimeout(function(){reloj()},500);
+    
+    }
+    
+     
+    
+    function actualizarHora(i) {
+    
+        if (i<10) {i = "0" + i};  // Añadir el cero en números menores de 10
+    
+        return i;
+    
+    }
+    
+    </script>
+
+<body onload="reloj()" >
+<div style="text-align:center;">
+<br><br><br><br><br><br><br><div id="cabecera"><h2 class="titulo4" style="font-size: 50px;">La hora en Argentina es:</h2>
+<br><br><div style="color:white; text-shadow: 3px 3px 3px black; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size:50px; padding:15px;" id ="Reloj" > &nbsp; </div>
+</div>
+
+</body>
+</html>

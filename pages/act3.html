@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Act3</title>
+</head>
+<body">
+
+<br><br><br><br><br><br><br><button id="boton" style="width: 256px; height: 124px; font-size: 25px; display: block; margin: 0 auto;">¡Basta YA!</button>
+<br><br><br><br><br><br><br><button id="boton2" style="width: 256px; height: 124px; font-size: 25px; display: block; margin: 0 auto;">¡Repetir!</button>
+
+    <script>
+
+        alert("¡Hola! A continuación disfrutarás de una página que cambia automáticamente su color!")
+
+        var intervalo = setInterval(ejecucion, 3000);
+
+        function random(numero) {
+            return Math.floor(Math.random() * (numero+1)); 
+        } 
+
+        function ejecucion() {
+            var color = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+            document.body.style.backgroundColor = color;
+        }
+
+        var boton = document.getElementById("boton");
+        var boton2 = document.getElementById("boton2");
+        var contador = 1;
+
+        boton.onclick = button;
+        boton2.onclick = button2;
+
+        function button() {
+            if (contador == 0) {
+                alert("Usted no puede detener. ¡No se esta ejecutando el cambio de colores!");
+            }
+            if (contador == 1) {
+                document.body.style.backgroundColor = 'rgb(' + (255) + ',' + (255) + ',' + (255) + ')'; 
+                intervalo = clearInterval(intervalo);
+                alert("¡Usted ha dicho BASTA!");
+                contador = 0;
+            }
+        }
+
+        function button2() {
+            if (contador == 1) {
+                alert("¡Usted no puede repetir sin haber detenido antes!");
+            }
+            if (contador == 0) {
+                intervalo = setInterval(ejecucion, 3000);
+                alert("Usted ha decidido repetir!");
+                contador = 1;
+            }
+        }
+            
+
+
+    </script>
+
+</body>
+</html>

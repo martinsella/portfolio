@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Act4</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</head>
+<body background="../images/background2.jpg">
+
+<div style="float: left;">
+    
+    <p class="titulo4">Nombre</p>
+    <input id="nombre" class="inputext" type="text" placeholder="Ingrese su nombre" autofocus="autofocus"><br><br><br>
+
+    <p class="titulo4">Apellido</p>
+    <input id="apellido" class="inputext" type="text" placeholder="Ingrese su apellido"><br><br><br>
+
+    <p class="titulo4">Edad</p>
+    <input id="edad" class="inputext" type="text" placeholder="Ingrese su edad" maxlength="2"><br><br><br>
+
+    <p class="titulo4">¿Algún juego que le guste mucho?</p>
+    <input id="juego" class="inputext" type="text" placeholder="Ingrese un juego"><br><br><br>
+
+    <p class="titulo4">¿Por qué lo ha elegido?</p>
+    <input id="porque" class="inputext" type="text" placeholder="Ingrese razón"><br><br><br><br><br>
+
+    <button id="boton">Finalizar</button>
+
+</div>
+
+    <script>
+
+    alert("Ingresa los datos solicitados. ¡Nos permitirán redactar un texto personalizado para ti!")
+
+    function armadotexto() {
+        //get a reference to the text input value
+        var nombre = $('#nombre').val();
+        var apellido = $('#apellido').val();
+        var edad = $('#edad').val();
+        var juego = $('#juego').val();
+        var porque = $('#porque').val();
+        var texto = "Mi nombre es " + nombre + " " + apellido + " y tengo " + edad + " años de edad." + " Mi videojuego favorito es " + juego + " porque " + porque + ".";
+        console.log(nombre);
+        console.log(apellido);
+        console.log(edad);
+        console.log(juego);
+        console.log(porque);
+        console.log(texto);
+        alert(texto);
+        alert("¡Gracias por utilizar!");
+    };
+
+    var boton = document.getElementById("boton");
+
+    boton.onclick = armadotexto;
+
+
+    </script>
+
+</body>
+</html>
