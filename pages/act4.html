@@ -24,7 +24,7 @@
     <p class="titulo4">¿Algún juego que le guste mucho?</p>
     <input id="juego" class="inputext" type="text" placeholder="Ingrese un juego"><br><br><br>
 
-    <p class="titulo4">¿Por qué lo ha elegido?</p>
+    <p class="titulo4">¿Por qué lo ha elegido? (Incluir "porque" al inicio de la respuesta)</p>
     <input id="porque" class="inputext" type="text" placeholder="Ingrese razón"><br><br><br><br><br>
 
     <button id="boton">Finalizar</button>
@@ -42,7 +42,7 @@
         var edad = $('#edad').val();
         var juego = $('#juego').val();
         var porque = $('#porque').val();
-        var texto = "Mi nombre es " + nombre + " " + apellido + " y tengo " + edad + " años de edad." + " Mi videojuego favorito es " + juego + " porque " + porque + ".";
+        var texto = "Mi nombre es " + nombre + " " + apellido + " y tengo " + edad + " años de edad." + " Mi videojuego favorito es " + juego + " " + porque + ".";
         console.log(nombre);
         console.log(apellido);
         console.log(edad);
