@@ -251,30 +251,12 @@ function collectStar2 (player, star2)
     }
 }
 
-function hitBomb (player, bomb)
-{
-    var fin = prompt("Juego terminado. ¿Desea reintentar? Si (s) / No (n)");
+    function hitBomb (player, bomb) {
 
-    if (fin == 's') {
-        alert("¡Comenzarás a jugar de nuevo!");
-        this.physics.pause();
-        this.scene.restart();
-        score = 0;
-    }
-    else if (fin == 'n') {
-        alert("¡Gracias por haber jugado!");
-        this.physics.pause();
-        player.setTint(0xff0000);
-        player.anims.play('turn');
-        gameOver = true;
-    }
-    else {
-        alert("Error. Debe ingresar (s) o (n)");
-        return hitBomb();
-    }
-    console.log(fin);
-}
-
+                this.scene.restart();
+                score = 0;
+        }
+        
 </script>
 
 </body>
